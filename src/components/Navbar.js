@@ -51,8 +51,8 @@ const Navbar = () => {
             href="/"
           />
           <motion.p
-            className="min-w-fit items-start bg-light/15 text-golden  hidden lg:flex select-none rounded-full"
-            initial={{ opacity: 0, x: -19, y: -100 }}
+            className="min-w-fit items-start bg-light/15 text-golden  hidden lg:flex select-none font-semibold rounded-full"
+            initial={{ opacity: 0.3, x: 39, y: -70 }}
             whileInView={{
               opacity: 1,
               x: -19,

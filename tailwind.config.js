@@ -20,7 +20,7 @@ module.exports = {
         tx: "#b2b2b8",
         bgDark: "#343a40",
         bgDarkSec: "#6c757d",
-        golden: "#B18C56",
+        golden: "#B18A52",
       },
       animation: {
         "spin-slow": "spin 10s linear infinite",
