@@ -1,4 +1,5 @@
 import Experience from "@/components/Experience";
+import HappyClients from "@/components/HappyClients";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import PracticeAreas from "@/components/PracticeAreas";
@@ -21,10 +22,13 @@ export default function Home() {
           <Header />
         </div>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between py-12 lg:py-24 bg-bgDark m-auto">
+      <div className="flex min-h-screen flex-col items-center justify-between py-12 lg:py-20 bg-bgDark m-auto">
         <PracticeAreas />
         <Experience />
-      </main>
+      </div>
+      <div className="flex flex-col items-center justify-between py-12 lg:py-20 bg-bgDarkest m-auto">
+        <HappyClients />
+      </div>
     </>
   );
 }

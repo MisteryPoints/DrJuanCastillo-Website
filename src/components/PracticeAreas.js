@@ -1,17 +1,21 @@
 import React from "react";
-import { Bitter } from "next/font/google";
+import { Bitter, Rubik } from "next/font/google";
 import { motion } from "framer-motion";
 import { BsBriefcase } from "react-icons//bs";
-import { IoIosPeople } from "react-icons/io";
+import { IoIosPeople, IoMdArrowRoundForward } from "react-icons/io";
 import { GiHumanTarget } from "react-icons/gi";
 import { SlBubbles } from "react-icons/sl";
 
 const bitter = Bitter({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"] });
 
 const CustomLink = ({ href, name, description, icon, num }) => (
   <motion.a
     href={href}
-    className="flex transition-all duration-500 hover:!opacity-100  group-hover:opacity-70"
+    className={
+      rubik.className +
+      " flex transition-all duration-500 hover:!opacity-100  group-hover:opacity-70 max-w-[445px]"
+    }
     initial={{ x: 70 }}
     whileInView={{
       x: 0,
@@ -25,8 +29,8 @@ const CustomLink = ({ href, name, description, icon, num }) => (
       {icon}
     </div>
     <div className="ml-5 text-sm">
-      <h1 className="mt-2 text-white">{name}</h1>
-      <p className="mt-2 text-white text-xs">{description}</p>
+      <h1 className="mt-2 text-primary">{name}</h1>
+      <p className="mt-2 text-tx text-sm">{description}</p>
     </div>
   </motion.a>
 );
@@ -62,10 +66,11 @@ const PracticeAreas = () => {
           }}
           viewport={{ once: true }}
         >
-          <p className="text-tx">
+          <p className="text-tx max-w-md">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in.
+            <br />
             <br />
             Separated they live in Bookmarksgrove right at the coast of the
             Semantics, a large language ocean.
@@ -111,6 +116,19 @@ const PracticeAreas = () => {
               num={4}
             />
           </div>
+        </div>
+        <div
+          className={
+            rubik.className +
+            " text-primary flex group mt-4 cursor-pointer text-sm"
+          }
+        >
+          <p className="duration-500 group-hover:text-white">
+            More Practice Areas
+          </p>
+          <p className="text-white text-base ml-3 p-1 group-hover:bg-primary duration-500 ">
+            <IoMdArrowRoundForward />
+          </p>
         </div>
       </div>
     </div>
