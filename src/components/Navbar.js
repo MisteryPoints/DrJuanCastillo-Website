@@ -33,10 +33,10 @@ const Navbar = () => {
   };
   return (
     <header className="w-full px-2 md:px-6 pt-4 mb-12 h-8 text-lg font-medium flex justify-between dark:text-light relative">
-      <div className="w-3/5 flex h-[100px] -top-8">
+      <div className="w-3/5 flex h-[100px] bg-light/10 -top-8">
         <Link href="/">
           <motion.img
-            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.297473a4.png&w=256&q=75"
+            src="/logo.png"
             height={100}
             width={100}
             alt="logo"
@@ -44,6 +44,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
+              x: -40,
               y: 0,
               transition: { duration: 0.6 },
             }}
@@ -51,12 +52,12 @@ const Navbar = () => {
             href="/"
           />
           <motion.p
-            className="min-w-fit items-start bg-light/15 text-golden  hidden lg:flex select-none font-semibold rounded-full"
-            initial={{ opacity: 0.3, x: 39, y: -70 }}
+            className="min-w-fit items-start bg-light/35 text-golden  hidden lg:flex select-none font-semibold rounded-full"
+            initial={{ opacity: 0.3, x: 40, y: -70 }}
             whileInView={{
               opacity: 1,
-              x: -19,
-              y: -70,
+              x: -55,
+              y: -5,
               transition: { duration: 0.6 },
             }}
             viewport={{ once: true }}

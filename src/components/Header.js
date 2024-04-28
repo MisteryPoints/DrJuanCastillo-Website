@@ -8,19 +8,20 @@ const bitter = Bitter({ subsets: ["latin"] });
 const Header = () => {
   return (
     <header
-      className={bitter.className + " md:w-1/3 w-4/5 top-96 right-4 absolute"}
+      className={bitter.className + " md:w-1/3 w-4/5 top-40 right-4 absolute"}
     >
       <motion.h1
         className="text-6xl font-semibold"
-        initial={{ opacity: 0.5, x: 150 }}
+        initial={{ opacity: 0.5, x: 120 }}
         whileInView={{
           opacity: 1,
-          x: 0,
+          x: 10,
           transition: { duration: 0.4 },
         }}
         viewport={{ once: true }}
       >
-        <span className="text-primary">We Fight</span> For Your Right
+        <span className="text-primary font-bold">Nos Preocupamos</span> Por tus
+        Derechos
       </motion.h1>
       <motion.p
         className="my-8 mx-5 text-gray-600 text-lg"
@@ -32,13 +33,16 @@ const Header = () => {
         }}
         viewport={{ once: true }}
       >
-        Another cool free template by the fine folks at{" "}
+        <span className="font-bold">
+          Trabajamos para apoyarte a defender tus derechos.{" "}
+        </span>{" "}
+        Diseñado por{" "}
         <Link
           href="https://devpoint.vercel.app"
           className="text-primary underline"
           target="_blank"
         >
-          Devpoint.
+          Víctor Tejada.
         </Link>
       </motion.p>
       <motion.button
@@ -51,7 +55,7 @@ const Header = () => {
         }}
         viewport={{ once: true }}
       >
-        Free Consultation
+        Consulta Gratis
       </motion.button>
     </header>
   );
