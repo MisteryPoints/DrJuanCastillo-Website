@@ -9,7 +9,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group transition-all text-[16px] duration-400 ease-in-out ${
+      className={`${className} relative group transition-all text-[18px] duration-400 ease-in-out ${
         asPath === href ? "text-dark" : "text-gray-500 hover:text-dark"
       }`}
     >
@@ -33,7 +33,7 @@ const Navbar = () => {
   };
   return (
     <header className="w-full px-2 md:px-6 pt-4 mb-12 h-8 text-lg font-medium flex justify-between dark:text-light relative">
-      <div className="w-3/5 flex h-[100px] bg-light/10 -top-8">
+      <div className="w-3/5 flex h-[100px] -top-8">
         <Link href="/">
           <motion.img
             src="/logo.png"
@@ -52,7 +52,7 @@ const Navbar = () => {
             href="/"
           />
           <motion.p
-            className="min-w-fit items-start bg-light/35 text-golden  hidden lg:flex select-none font-semibold rounded-full"
+            className="min-w-fit items-start   text-golden  hidden lg:flex select-none font-semibold rounded-full"
             initial={{ opacity: 0.3, x: 40, y: -70 }}
             whileInView={{
               opacity: 1,
@@ -67,7 +67,7 @@ const Navbar = () => {
         </Link>
       </div>
       <motion.nav
-        className="w-2/5 justify-end items-end hidden md:flex h-8"
+        className="w-2/5 justify-end text-xl items-end hidden md:flex h-8"
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
